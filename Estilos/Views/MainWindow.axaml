@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Estilos.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Estilos.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Estilos">
+
+    <Window.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="DarkGreen"/>
+            <Setter Property="FontSize" Value="38"/>
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+    
+    
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <StackPanel>
+        <TextBlock Text="ESTILOS"/>
+        <Button Content="ACEPTAR" 
+                Classes="normal zoom"/>
+        
+        <Button Content="CANCELAR" 
+                Classes="balanceo"/>
+        
+        <TextBlock Text="Esto es una prueba"/>
+        <Button Width="200" Height="200">
+            <Image Source="avares://Estilos/Assets/boton.png"></Image>
+        </Button>
+    </StackPanel>
+
+</Window>

@@ -1,0 +1,92 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+        <Style Selector="Button.normal:pointerover">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Background">
+                        <Setter.Value>
+                                <ImageBrush Stretch="Fill"
+                                        Source="avares://Estilos/Assets/boton.png"/>
+                        </Setter.Value>
+                </Setter>
+        </Style>
+        
+        <Style Selector="Button.normal:pointerover">
+                <Setter Property="Background">
+                        <Setter.Value>
+                                <ImageBrush Stretch="Fill"
+                                            Source="avares://Estilos/Assets/boton.png"/>
+                        </Setter.Value>
+                </Setter>
+        </Style>
+        
+        <Style Selector="Button.cancelar">
+                <Setter Property="Background" Value="DarkRed"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Width" Value="200"/>
+        </Style>
+        
+        <Style Selector="Button.animado">
+                <Setter Property="Background" Value="DarkRed"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Transitions">
+                        <Transitions>
+                                <BrushTransition Property="Background" Duration="0:0:0.9"/>
+                                <DoubleTransition Property="Opacity" Duration="0:0:0.6"/>
+                        </Transitions>
+                </Setter>
+        </Style>
+        
+        <Style Selector="Button.animado:pointerover">
+                <Setter Property="Background" Value="DarkGreen"/> 
+                <Setter Property="Opacity" Value="0.8"/>
+        </Style>
+        
+        <Style Selector="Button.animado:pressed">
+                <Setter Property="Background" Value="Fuchsia"/>
+        </Style>
+        
+        <Style Selector="Button.zoom">
+                <Setter Property="RenderTransform" Value="scale(1) rotate(0deg)"/>
+                <Setter Property="Transitions">
+                        <Transitions>
+                                <TransformOperationsTransition Property="RenderTransform"
+                                                               Duration="0:0:0.2"/>
+                                <BrushTransition Property="Background" Duration="0:0:0.1"/>
+                        </Transitions>
+                </Setter>
+        </Style>
+        <Style Selector="Button.zoom:pointerover">
+                <Setter Property="RenderTransform" Value="scale(1.2) rotate(5deg)"/>
+                <Setter Property="Background" Value="DarkMagenta"/>
+        </Style>
+        
+        <Style Selector="Button.balanceo:pointerover">
+                <Style.Animations>
+                        <Animation Duration="0:0:0.8" IterationCount="INFINITE"
+                                   Easing="SineEaseInOut">
+                                <KeyFrame Cue="0%">
+                                        <Setter Property="RotateTransform.Angle" Value="-10"/>
+                                        <Setter Property="ScaleTransform.ScaleX" Value="1.3"/>
+                                        <Setter Property="ScaleTransform.ScaleY" Value="1.3"/>
+                                </KeyFrame>
+                                
+                                <KeyFrame Cue="50%">
+                                        <Setter Property="RotateTransform.Angle" Value="30"/>
+                                        <Setter Property="ScaleTransform.ScaleX" Value="0.8"/>
+                                        <Setter Property="ScaleTransform.ScaleY" Value="0.8"/>
+                                </KeyFrame>
+                                
+                                <KeyFrame Cue="100%">
+                                        <Setter Property="RotateTransform.Angle" Value="-20"/>
+                                        <Setter Property="ScaleTransform.ScaleX" Value="1.3"/>
+                                        <Setter Property="ScaleTransform.ScaleY" Value="1.3"/>
+                                </KeyFrame>
+                                
+                        </Animation>
+                </Style.Animations>
+        </Style>
+</Styles>
